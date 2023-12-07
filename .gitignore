@@ -1,2 +1,6 @@
 *lock
 .venv
+.python-version
+pyproject.toml
+/data
+/model

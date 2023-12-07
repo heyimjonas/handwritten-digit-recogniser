@@ -7,7 +7,7 @@ import torchvision.transforms as transforms
 import os
 
 
-# Define a simple CNN model
+# define cnn model
 class SimpleCNN(nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__()
@@ -39,7 +39,7 @@ test_dataset = torchvision.datasets.MNIST(
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1000, shuffle=False)
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # use cpu if im not on wsl
 model = SimpleCNN().to(device)
 
 # Define loss and optimizer
